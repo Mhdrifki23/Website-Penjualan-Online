@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toko Online / M.Rifki</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Mulai Navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-warning">
+      <div class="container">
+        <h3><i class="bi bi-cart-check-fill fs-1"></i></h3>
+        <a class="navbar-brand fw-bold ms-2" href="#">TOKO ONLINE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Reseller</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Hubungi</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">kami</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Bantuan</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" onsubmit="event.preventDefault(); filterCards();">
+            <input id="searchInput" class="form-control me-2 ms-4" type="search" placeholder="Search" aria-label="Search" oninput="filterCards()" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <div class="icon">
+            <i class="bi bi-cart-check-fill ms-3 fs-4" data-bs-toggle="tooltip"
+            title="Keranjang Belanja"></i>
+            <i class="bi bi-envelope-fill ms-3 fs-4"  data-bs-toggle="tooltip"
+            title="Surat Masuk"></i>
+            <i class="bi bi-bell-fill ms-3 fs-4"  data-bs-toggle="tooltip"
+            title="Notifikasi"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Akhir Navbar -->
+
+    <!-- Mulai Sidebar -->
+    <div class="d-flex flex-wrap justify-content-center mb-4">
+      <div class="col-12 col-md-12">
+        <div id="carouselExample" class="carousel slide container mt-3">
+          <div class="carousel-inner" style="border-radius: 20px;">
+            <div class="carousel-item active">
+              <img src="./assets/Slide/slide1.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/Slide/slide2.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload d-block w-100" />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/Slide/slide3.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload d-block w-100" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <h3 class="text-center fw-bold mt-4">PRODUK TERBARU</h3>
+
+        <!-- BAJU -->
+        <div class="d-flex flex-wrap justify-content-center py-3 mb-4 container" id="productContainer">
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/jacket.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Jacket" />
+            <div class="card-body">
+              <h5 class="card-title">Jacket</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-half text-success"></i>
+              <p class="card-text">Mzaidan PREMIUM Jaket Kulit Pria Ramones The changcuters Bigsize/Size M L XL 2XL Terbaru</p>
+              <a href="#" class="btn btn-primary" data-bs-target="#produk1" data-bs-toggle="modal">Detail</a>
+              <a href="#" class="btn btn-danger">Rp. 400.000</a>
+            </div>
+          </div>
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/polo.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Polo Yordano" />
+            <div class="card-body">
+              <h5 class="card-title">Polo Giordano</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <p class="card-text">Original Giordano Polo Shirt Pria/Men 3D Lion & Embos Lion - Size XS, S, M, L, XL,Terbaru</p>
+              <a href="#" class="btn btn-primary" data-bs-target="#produk2" data-bs-toggle="modal">Detail</a>
+              <a href="#" class="btn btn-danger">Rp. 500.000</a>
+            </div>
+          </div>
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/hoodie.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Hoodie" />
+            <div class="card-body">
+              <h5 class="card-title">Hoodie</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-half text-success"></i>
+              <i class="bi bi-star"></i>
+              <p class="card-text">Original Giordano Polo Shirt Pria/Men 3D Lion & Embos Lion - Size XS, S, M, L, XL,Terbaru</p>
+              <a href="#" class="btn btn-primary" data-bs-target="#produk3" data-bs-toggle="modal">Detail</a>
+              <a href="#" class="btn btn-danger">Rp. 350.000</a>
+            </div>
+          </div>
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/jaket1.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Jacket winter" />
+            <div class="card-body">
+              <h5 class="card-title">Jaket winter</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star text-success"></i>
+              <p class="card-text">jaket winter pria / jaket gunung / jaket musim dingin / mantel tebal / jaket anti angin</p>
+              <a href="#" class="btn btn-primary" data-bs-target="#produk4" data-bs-toggle="modal">Detail</a>
+              <a href="#" class="btn btn-danger">Rp. 345.000</a>
+            </div>
+          </div>
+          <!-- AKHIR -->
+
+          <!-- ELEKTRONIK -->
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/kamera.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Cannon" />
+            <div class="card-body">
+              <h5 class="card-title">Cannon</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <p class="card-text"> KAMERA CANON EOS 1300D + LENSA KIT 18-55MM IS WIFI - GARANSI 1 TAHUN - CAMERA DSLR 4000D 1200D</p>
+              <a href="#" class="btn btn-primary" data-bs-target="#produk5" data-bs-toggle="modal">Detail</a>
+              <a href="#" class="btn btn-danger">Rp. 3.483.000</a>
+            </div>
+          </div>
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/laptop.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Laptop" />
+            <div class="card-body">
+              <h5 class="card-title">Laptop</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star"></i>
+              <p class="card-text">LAPTOP ASUS VIVOBOOK 14 A416MAO FHD Intel Celeron N4020 4GB/8GB 256GB SSD Win11+OHS 14" FHD BACKLIT GREY SILVER</p>
+              <a href="#" class="btn btn-primary" data-bs-target="#produk6" data-bs-toggle="modal">Detail</a>
+              <a href="#" class="btn btn-danger">Rp. 7.911.000</a>
+            </div>
+          </div>
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/headphone.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Headset Hyperx" />
+            <div class="card-body">
+              <h5 class="card-title">Headset Hyperx</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star text-success"></i>
+              <p class="card-text">Baseus H1i Headphone ANC Wireless Noice Cancelling HiRes</p>
+              <a href="#" class="btn btn-primary mt-5" data-bs-target="#produk7" data-bs-toggle="modal" >Detail</a>
+              <a href="#" class="btn btn-danger mt-5">Rp. 345.000</a>
+            </div>
+          </div>
+          <div class="card mb-3 me-3" style="width: 18rem;">
+            <img src="./assets/Product/spiker1.jpg" data-mdb-lazy-animation="fadeIn" class="lazyload card-img-top" alt="Speaker Bluetooth" />
+            <div class="card-body">
+              <h5 class="card-title">Speaker Bluetooth</h5>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star-fill text-success"></i>
+              <i class="bi bi-star"></i>
+              <p class="card-text">Speaker Bluetooh JBL TG113 Wireless Portable Speaker Aktif Dual Subwofer Bass</p>
+              <a href="#" class="btn btn-primary mt-4" data-bs-target="#produk8" data-bs-toggle="modal">Detail</a>
+              <a href="#" class="btn btn-danger mt-4">Rp. 345.000</a>
+            </div>
+          </div>
+        </div>
+        <!-- Detail Produk -->
+        <!-- 1 -->
+        <div class="modal fade" id="produk1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/jacket.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>Jaket Kulit</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp1RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 10%</td>
+                      <tr>
+                        <th>Terjual Barang</th>
+                        <td>8,3RB Terjual</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-half text-success"></i>
+                        </th>
+                        <td>4,5  |  500 Penilaian | 900 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang</button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="modal fade" id="produk2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/polo.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>Poloolo Giordano</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp3RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 5%</td>
+                      <tr>
+                        <th>Terjual Barang</th>
+                        <td>7RB Terjual</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                        </th>
+                        <td>5,0 |  750 Penilaian | 500 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang </button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="modal fade" id="produk3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/hoodie.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>Jaket Hoodie</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp1RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 15%</td>
+                      <tr>
+                        <th>Terjual Barang</th>
+                        <td>4,5RB Terjual</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-half text-success"></i>
+                          <i class="bi bi-star"></i>
+                        </th>
+                        <td>3,5  |  300 Penilaian | 350 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang</button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="modal fade" id="produk4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/jaket1.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>Jaket Winter</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp1RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 5%</td>
+                      <tr>
+                        <th>Terjual Barang</th>
+                        <td>4,3RB Terjual</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star"></i>
+                        </th>
+                        <td>4,0 |  500 Penilaian | 900 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang</button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="modal fade" id="produk5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/kamera.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>KAMERA CANON EOS 1300D</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp1RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 5%</td>
+                      <!-- <tr>
+                        <th>Terjual Barang</th>
+                        <td>4,3RB Terjual</td>
+                      </tr> -->
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                        </th>
+                        <td>4,8 |  275 Penilaian | 472 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang</button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="modal fade" id="produk6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/laptop.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>Laptop</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp1RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 5%</td>
+                      <tr>
+                        <th>Produk</th>
+                        <td>691</td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star"></i>
+                        </th>
+                        <td>4,0 |  18,2RB Penilaian | 200 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang</button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="modal fade" id="produk7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/headphone.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>Headset Hyperx</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp5RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 10%</td>
+                      <!-- <tr>
+                        <th>Terjual Barang</th>
+                        <td>4,3RB Terjual</td>
+                      </tr> -->
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star"></i>
+                        </th>
+                        <td>4,0 |  400 Penilaian | 350 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang</button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="modal fade" id="produk8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="./assets/Product/spiker1.jpg" class="img-fluid" />
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table table-borderless">
+                      <tr>
+                        <th>Nama Produk</th>
+                        <td>Speaker Bluetooth</td>
+                      </tr>
+                    </tr>
+                    <tr>
+                      <th>Pengiriman</th>
+                      <td><i class="bi bi-truck"></i> Gratis Ongkir</td>
+                    </tr>
+                      <tr>
+                        <th>Retur</th>
+                        <td>Bebas Pengembalian</td>
+                      </tr>
+                      <tr>
+                        <th>Vocher Toko</th>
+                        <td>Rp3RB OFF</td>
+                      </tr>
+                      <tr>
+                        <th>Hemat</th>
+                        <td>Diskoon 5%</td>
+                      <!-- <tr>
+                        <th>Terjual Barang</th>
+                        <td>4,3RB Terjual</td>
+                      </tr> -->
+                      <tr>
+                        <th>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star-fill text-success"></i>
+                          <i class="bi bi-star"></i>
+                        </th>
+                        <td>4,0 |  600 Penilaian | 750 Terjual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Masukkan Keranjang</button>
+                <button type="button" class="btn btn-danger">Beli Sekarang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Akhir Detail Produk -->
+      </div>
+    </div>
+    <p id="notFound" class="mb-3 me-3 text-center text-dark" style="display: none;">Barang tidak di temukan</p>
+    <!-- Akhir Sidebar -->
+    <footer class="bg-dark text-white p-3">
+      <div class="row ms-4">
+        <div class="col md-3">
+          <h5>LAYANAN PELANGGAN</h5>
+          <ul>
+            <a href="#"><li>Pusat Bantuan</li></a>
+            <a href="#"> <li>Cara Pembelian</li></a>
+            <a href="#"> <li>Pengiriman</li></a>
+            <a href="#"><li>Cara Pengembalian</li></a>
+          </ul>
+        </div>
+        <div class="col md-3">
+          <h5>TENTANG KAMI</h5>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid distinctio debitis tenetur hic molestiae dicta, iusto consequatur harum minus.</p>
+        </div>
+        <div class="col md-3">
+          <h5>MITRA KERJASAMA</h5>
+          <ul>
+            <a href="#"><li>JNE YES</li></a>
+            <a href="#"> <li>J&T Economy</li></a>
+            <a href="#"> <li> J&T Express</li></a>
+            <a href="#"><li>JNE Trucking (JTR) </li></a>
+          </ul>
+        </div>
+        <div class="col md-3">
+          <h5>PUSAT BANTUAN</h5>
+          <ul>
+            <a href="#"><li>Chat dengan Kami</li></a>
+            <a href="#"> <li>Kontak</li></a>
+            <a href="#"> <li>Hubungi Layanan Pelanggan</li></a>
+            <a href="#"><li>Hubungi Tim Kami</li></a>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <footer class="bg-warning text-center text-dark py-3 fw-bold">
+      <p>&copy; 2024 Toko Online. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
